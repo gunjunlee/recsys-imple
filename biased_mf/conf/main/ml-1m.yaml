@@ -1,0 +1,19 @@
+dataset: MovieLense1M
+
+batch_size: 1024
+
+num_factors: 64
+dropout: 0.05
+
+lr: 1e-2
+weight_decay: 5e-5
+step_size: 30
+
+min_rating: 1
+max_rating: 5
+
+epoch: 120
+
+reproducibility:
+  fix_rng: true
+  seed: 1000

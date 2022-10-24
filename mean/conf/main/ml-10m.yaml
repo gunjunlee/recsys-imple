@@ -1,0 +1,5 @@
+dataset: MovieLense10M
+
+reproducibility:
+  fix_rng: true
+  seed: 1000

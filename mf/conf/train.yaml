@@ -1,0 +1,9 @@
+defaults:
+  - _self_
+  - main: ml-100k
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: disabled
+
+hydra:
+  job:
+    chdir: false

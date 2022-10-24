@@ -1,0 +1,21 @@
+dataset: MovieLense100K
+
+batch_size: 128
+
+num_factors: 8
+dropout: 0.05
+
+lr: 1e-2
+bias_weight_decay: 1e-3
+embd_weight_decay: 1e-3
+
+step_size: 30
+
+min_rating: 1
+max_rating: 5
+
+epoch: 120
+
+reproducibility:
+  fix_rng: true
+  seed: 1000
