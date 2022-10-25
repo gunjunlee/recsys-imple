@@ -2,7 +2,7 @@ dataset: MovieLense10M
 
 batch_size: 8192
 
-num_factors: 64
+num_factors: 32
 dropout: 0.05
 
 lr: 1e-2

@@ -6,7 +6,8 @@ num_factors: 64
 dropout: 0.05
 
 lr: 1e-2
-weight_decay: 5e-5
+bias_weight_decay: 5e-6
+embd_weight_decay: 5e-5
 step_size: 30
 
 min_rating: 1

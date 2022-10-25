@@ -23,15 +23,23 @@ class Dataset(torch.utils.data.Dataset):
         self.df = df
         self.user_id_converter = user_id_converter
         self.item_id_converter = item_id_converter
+        self.user_ids = []
+        self.item_ids = []
+        self.ratings = []
+        for row in self.df.itertuples():
+            user_id = self.user_id_converter.get(row.user_id, 0)
+            item_id = self.item_id_converter.get(row.item_id, 0)
+            self.user_ids.append(user_id)
+            self.item_ids.append(item_id)
+            self.ratings.append(row.rating)
 
     def __len__(self):
         return len(self.df)
 
     def __getitem__(self, idx):
-        row = self.df.iloc[idx]
-        user_id = self.user_id_converter.get(row.user_id, 0)
-        item_id = self.item_id_converter.get(row.item_id, 0)
-        rating = row.rating
+        user_id = self.user_ids[idx]
+        item_id = self.item_ids[idx]
+        rating = self.ratings[idx]
         return {
             "user_id": user_id,
             "item_id": item_id,
