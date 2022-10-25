@@ -1,12 +1,12 @@
 dataset: MovieLense10M
 
-batch_size: 8192
+batch_size: 4096
 
 num_factors: 32
 dropout: 0.05
 
 lr: 1e-2
-bias_weight_decay: 0
+bias_weight_decay: 1e-5
 embd_weight_decay: 1e-5
 step_size: 30
 
