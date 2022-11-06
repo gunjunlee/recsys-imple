@@ -6,3 +6,7 @@ RMSE
 |item mean|1.0256|0.9766|0.9806|0.9415|0.9599|
 |MF|0.9151|0.8464|0.8073|
 |Biased-MF|0.9143|0.8475|0.8088|
+|AutoRec|0.8877|0.8280|0.8096|
+
+Cannot reproduce AutoRec - ML-10m performance
+

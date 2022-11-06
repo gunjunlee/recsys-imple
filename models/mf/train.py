@@ -147,7 +147,7 @@ def main(config):
         fix_rng(config.main.reproducibility.seed)
 
 
-    df = MovieLense.get_df_cached(config.main.dataset)
+    df = MovieLense.get_df(config.main.dataset)
     train_df, valid_df = split_df(df, [0.90, 0.10], shuffle=True)
     user_id_converter = {user_id: idx + 1 for idx, user_id in enumerate(train_df.user_id.unique())}
     item_id_converter = {item_id: idx + 1 for idx, item_id in enumerate(train_df.item_id.unique())}

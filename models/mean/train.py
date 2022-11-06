@@ -31,7 +31,7 @@ def main(config):
         fix_rng(config.main.reproducibility.seed)
 
     with Timer("read df"):
-        df = MovieLense.get_df_cached(config.main.dataset)
+        df = MovieLense.get_df(config.main.dataset)
     train_df, valid_df = split_df(df, [0.90, 0.10], shuffle=True)
     user_mean = train_df.groupby("user_id")["rating"].mean().to_dict()
     item_mean = train_df.groupby("item_id")["rating"].mean().to_dict()

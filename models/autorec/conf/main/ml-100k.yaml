@@ -1,0 +1,25 @@
+dataset: MovieLense100K
+
+base: item
+g: Sigmoid
+f: Identity
+
+k: 512
+
+batch_size: 8
+val_batch_size: 128
+
+unseen_r: 3
+
+lr: 1e-3
+weight_decay: 1e-3
+step_size: 10
+
+min_rating: 1
+max_rating: 5
+
+epoch: 120
+
+reproducibility:
+  fix_rng: true
+  seed: 1000
